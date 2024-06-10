@@ -38,6 +38,7 @@ export default function Header() {
     } catch (error) {
       console.log(error.message);
     }
+    navigate('/sign-in')
   };
 
   const handleSubmit = (e) => {
@@ -55,7 +56,7 @@ export default function Header() {
         className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
       >
         <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-          Sahand's
+          Ayush's
         </span>
         Blog
       </Link>
@@ -68,10 +69,9 @@ export default function Header() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+        
       </form>
-      <Button className='w-12 h-10 lg:hidden' color='gray' pill>
-        <AiOutlineSearch />
-      </Button>
+      
       <div className='flex gap-2 md:order-2'>
         <Button
           className='w-12 h-10 hidden sm:inline'
